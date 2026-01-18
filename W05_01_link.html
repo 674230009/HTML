@@ -34,11 +34,13 @@
         }
 
         pre {
-        /* white-space: pre-wrap;
-        word-wrap: break-word; */
+
         padding: 15px;
         font-size: 0.9em;
         color: #004414;
+
+        word-wrap: break-word;
+        white-space: pre-wrap;
         }
 
         .btn-link{
@@ -73,6 +75,11 @@
             box-shadow: 0 4px 12px rgb(210, 210, 210);
             letter-spacing: 0.5px;
         } 
+        .card1.module-2{ border-top-color:blue;}
+        .card1.module-3{ border-top-color:rgb(165, 0, 97);}
+        .card1.module-4{ border-top-color:rgb(255, 0, 0);}
+        .card1.module-5{ border-top-color:rgb(191, 255, 0);}
+        .card1.module-6{ border-top-color:rgb(53, 103, 53);}
 
 
         .box{
@@ -138,6 +145,28 @@
             box-shadow: 0 4px 12px rgb(113, 112, 112);
 
         }
+
+        /* แบบบนจอแท็บเล็ต */
+        @media (max-width: 992px){
+            .card-grid{
+                grid-template-columns: 1fr;  /*เปลี่ยนเป็ฯคอลัมเดียวบนหน้าจอ */
+            }
+        }
+
+         /* แบบบนจอมือถือ */
+        @media (max-width: 768px){
+            .grid-3-col{
+                grid-template-columns: repeat(2,1fr);  /*เปลี่ยนเป็นคอลัมเดียวบนหน้าจอ */
+            }
+        }
+
+        
+         /* แบบบนจอมือถือ */
+        @media (max-width: 576px){
+            .grid-3-col{
+                grid-template-columns: 1fr;  /*เปลี่ยนเป็นคอลัมเดียวบนหน้าจอ */
+            }
+        }
         
     </style>
 
@@ -162,8 +191,8 @@
                 </div>
              </div>             
              
-                     <!-- card 2 -->
-              <div class="card1">
+            <!-- card 2 -->
+              <div class="card1 module-2">
                 <h2>2. Internal Links & Anchor Links</h2>
                 <pre class="box"><code>
              &lt;a href="about.html"&gt;About Us&lt;/a&gt; 
@@ -176,28 +205,42 @@
                 <h3 id="jume" style="margin-top: 30px;">This is the jump target.</h3>
               </div>
               
-                     <!-- card 3 -->
-             <div class="card1 ">
+            <!-- card 3 -->
+             <div class="card1 module-3">
                 <h2>3. Email Links</h2>
                 <pre class="box"><code>&lt;a href="mailto:student@example.com?subject=Hello"&gt; 
                  Send an Email  
              &lt;/a&gt;
              </code></pre>
-                <a href="mailto:student@example.com?subject=Hello"> 
+                <a href="mailto:student:s.warapon@webmail.npru.ac.th?subject=จดหมายสมัครงาน"> 
                  Send an Email  
              </a>
              </div>
               
-                     <!-- card 4 -->
-             <div class="card1">
+            <!-- card 4 -->
+             <div class="card1 module-4">
                 <h2>4. Download Links</h2>
                 <pre class="box"><code>&lt;a href="files/sample.txt" download&gt;Download File&lt;/a&gt;</code></pre>
                 <a class="m2" href="file/images.png" download>Download File</a>
                 <p>ต้องมีไฟล์ในโฟลเดอร์จึงจะดาวน์โหลดได้จริง</p>
              </div>
-             
-                     <!-- card 5 -->
-             <div class="card1">
+        </div>
+
+              <!-- card 5 -->
+             <div class="card1 module-5">
+                <h2>6. Imege Link</h2>
+                <p>คลิกที่รูปภาพเพื่อเปิดลิงค์</p>
+                <pre class="box modu3"><code>&lt;a href="https://youtube.com"&gt; 
+             &lt;img src="images/sample.jpg" width="250"&gt; 
+             &lt;/a&gt;</code>
+                </pre>
+                <a class="image-link" href="https://www.youtube.com" target="_blank">
+                <img src="Photo/sample.jpg" alt="YouTube logo" width="250"></a>
+                <p class="note">💡หากต้องการใช้รูปของตนเอง ต้องเก็บรูปไว้ในโฟลเดอร์เช่น <mark>images/photo.jpg</mark></p>
+             </div>
+        
+          <!-- card 6 -->
+             <div class="card1 module-6">
                 <h2>5. Button Link</h2>
                 <p>ลิงค์ที่ออกแบบให้คล้ายปุ่ม เหมาะกับปุ่มสมัคร ปุ่มอ่านเพิ่มเติม หรือปุ่มนำทาง</p>
                 <pre class="box modu2"><code>&lt;a href="https://www.example.com" class="btn-link"&gt; 
@@ -220,55 +263,40 @@
                 <div class="grid-3-col">
                     <div>
                         <p>ปุ่ม <code>document.location</code></p>
-                        <button onclick="document.location='index.html'">HTML Tutorial</button>
+                        <button class="" onclick="document.location='index.html'">HTML Tutorial</button>
                     </div>
 
                     <div>
                         <p><code>ปุ่ม location.href</code></p>
-                        <button>Visit Website</button>
+                        <button class="" onclick="window.location.href='https://www.example'">Visit Website</button>
                     </div>
 
                     <div>
                         <p><code>ตัวอย่างปุ่มจาก https://cssnippets.shefail.dev</code></p>
-                        <button>SUBSCRIBS</button>
+                        <button class="btn-slide1"><span>SUBSCRIBS</span></button>
                     </div>
 
                     <div>
                         <p><code>เพิ่มขอบทอง</code></p>
-                        <button>SUBSCRIBS</button>
+                        <button class="btn-slide2"><span>SUBSCRIBS</span></button>
                     </div>
                     
                     <div>
                         <p><code>เพิ่มแอนิเมชั่นเมื่อชี้ปุ่ม</code></p>
-                        <button>SUBSCRIBS</button>
+                        <button class="btn-slide3"><span>SUBSCRIBS</span></button>
                     </div>
                     
                     <div>
                         <p>ปุ่มสีดำ ขอบทอง แสงวิ่ง</p>
-                        <button>SUBSCRIBS</button>
+                        <button class="btn-slide4" onclick="window.location.href='https://www.example.com'"><span>SUBSCRIBS</span></button>
                     </div>
                 </div>
-                
-
+            
              </div>
              
-                     <!-- card 6 -->
-             <div class="card1">
-                <h2>6. Imege Link</h2>
-                <p>คลิกที่รูปภาพเพื่อเปิดลิงค์</p>
-                <pre class="box modu3"><code>&lt;a href="https://youtube.com"&gt; 
-             &lt;img src="images/sample.jpg" width="250"&gt; 
-             &lt;/a&gt;</code>
-                </pre>
-                <a class="image-link" href="https://www.youtube.com" target="_blank">
-                <img src="Photo/sample.jpg" alt="YouTube logo" width="250"></a>
-                <p class="note">💡หากต้องการใช้รูปของตนเอง ต้องเก็บรูปไว้ในโฟลเดอร์เช่น <mark>images/photo.jpg</mark></p>
-             </div>
-             
-         </div>
 
              <footer>
-            <a href="" class="back-link">&larr; Back to HTML Tutorial</a>
+            <a href="index.html" class="back-link">&larr; Back to HTML Tutorial</a>
             </footer>
  
 
