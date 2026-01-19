@@ -7,19 +7,29 @@
             padding: 0;
         }
 
+        html{
+            scroll-padding: 200px;
+            scroll-behavior: smooth;
+        }
+
 
         body {
             font-family: Arial, sans-serif;
             line-height: 1.5;
-            background-color: rgb(181, 125, 181);
-            color: rgb(107, 98, 87);
+            background-color: rgb(210, 179, 210);
+
+            background-image:url("../photo/sea.jpg") ;
+            background-repeat:no-repeat;
+            background-size:cover ;
+            background-attachment:fixed ;
+            background-position:center;
         }
         /* CSS Global  */
 
 
         .container {
             max-width: 1200px;
-            background-color: bisque;
+            /* background-color:  rgb(210, 179, 210); */
             margin: 180px auto 20px ;
             
         }
@@ -32,11 +42,43 @@
         .card.module-2 {}
 
 
-        pre {}
+        pre{
+        background-color: rgba(222, 219, 219, 0.662);
+            
+            padding: 10px 0;
+            padding-left: 10px;
+            border-left: 4px solid #f006aa;
+            letter-spacing: 0.5px;
+            line-height: 25px;
+        }
 
-        .note {}
+         
+        .note{
+            border-left: 4px solid #696969;
+            padding-left: 10px;
+            color: #696969;
+            margin-top: 15px;
+        }
 
         .note::before {}
+
+        .back-link{
+            display:block;/* display:ถ้าให้ขึ้นพอดีข้อความใช้(inline-block),[ถ้าให้สีพื้นหลังข้อความขึ้นเต็มบรรทัดใช้(block)] */
+            margin-top: 15px;
+            text-decoration: none;
+            color: rgb(0, 30, 203);
+            font-weight: bold;
+            background-color: aquamarine;
+            text-align: center; /*จัดให้อยู่ตรงกลางหน้าในบรรทัดนั้น */
+            border-radius: 100px; /* ทำให้ขอบสี่เหลี่ยมมนขึ้น */
+            padding: 10px 0;
+        }
+
+        .back-link:hover{
+             /* text-decoration:underline; */
+             color: rgb(255, 255, 255);
+            background-color: rgb(1, 1, 105);
+        }
 
 
         code {
@@ -45,12 +87,22 @@
             padding: 2px 4px;
         }
 
-        .badge {}
+        .badge {
+            color: #f006aa;
+            background-color: rgba(253, 233, 131, 0.673);
+            border-radius: 99px;
+            padding: 5px 10px;
+            font-size: 0.8rem;  /* 1RM = 16PX */
+            vertical-align: middle;  /*ตำแหน่งองค์ประกอบในแนวตั้ง*/
+        }
 
 
         /* Images (global safe defaults) */
-        img {}
-
+       
+          img {
+                max-width: 100%;
+                height: auto;
+                }
 
 
         /* CSS For Group 1: Header  */
@@ -73,7 +125,7 @@
             color: rgb(243, 0, 0);
         }
 
-        .list-menu{
+        .list-menu ul{
             display: flex;
             list-style: none;
 
@@ -82,21 +134,31 @@
         }
 
         .list-menu li{
-            background-color: rgb(213, 19, 90);
-            padding: 10px 15px;
-            border-radius: 5px;
-            margin: 10px;
-            box-shadow:  5px 5px 5px rgb(186, 67, 138);
+            margin-top:30px;
+            transition: transform 0.3s ease;
         }
 
-        .list-menu li a {
+        .list-menu li:hover{
+            margin-top:30px;
+            transform: translateY(-5px);
+        }
+
+        .list-menu a {
             text-decoration: none;
             color: white;
             font-weight: bold;
+
+
+            /* background-color: #c055a0; */
+            background:linear-gradient(135deg,red,violet);  /* background:linear-gradient .ใช้สำหรับการไล่สี*/
+            box-shadow: 0 4px 15px gray;
+            padding: 8px 12px;
+            border-radius: 6px;
+           
         }
         
-        .list-menu li:hover {
-            background-color: blueviolet;
+        .list-menu a:hover {
+             background:linear-gradient(135deg,rgb(0, 208, 255),rgb(121, 27, 243));
         }
 
          .card1{
@@ -119,31 +181,84 @@
 
 
         /* CSS For Group 2: Card 1: Basics  */
+        .position {
+            display: flex;   /*flex เป็นการจัดไอเทมในแนวนอน*/
+            align-items: center; /*align-items เป็นการจัดกลางของตัวไอเทมแนวตั้ง*/
+            border: 4px dashed rgb(185, 170, 172);
+            margin: 15px 0;
+        }
+        .position.left {
+            justify-content:flex-start;
+        }
+
+        .position.center {
+            justify-content:center;
+        }
+
+        .position.right {
+            justify-content:flex-end;
+        }
+        
+        .img_small {
+            width: 100px;
+            height: auto;
+        }
+
 
 
         /* CSS For Group 3: Card 2: Resize & aspect  */
-        
-
-        .img_small {
-            width: 10%;
-        }
+         .img-fixed {
+                width: 260px;
+                height: 160px;
+                object-fit: cover;
+                }
 
         /* CSS For Group 4: Card 3: Object fit  */
 
+        .obj-fit-image{
+                width: 800px;
+                height: 200px;
+                border: 1px solid black;
+        }
+
+        .obj-fit-image.contain { object-fit: contain; }
+
+        .obj-fit-image.fill { object-fit: fill; }
+
+        .obj-fit-image.cover { object-fit: cover; }
+
 
         /* CSS For Group 5: Card 4: Image as Link  */
+        .yt_img{
+            margin-top: 10px;
+        }
 
         /* CSS For Group 6: Card 5: Gallery  */
-
+        .gallery { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 12px;
+        }
+        .gallery img { 
+            height: 120px; 
+            width:100%;
+            object-fit: cover; 
+        }
 
         /* CSS For Group 7: Card 6: Responsive  */
 
-
         /* CSS For Group 8: Card 7: Figure & Caption + Task  */
-
+            figure{
+                margin: 0 auto;
+                text-align: center;
+            }
 
         /* CSS For Group 9: Card 8: Local file tips  */
 
+        .bg-img{
+            background-image: url("../photo/Pink.jpg");
+            
+        }
 
         /* CSS For Group 10: Back to Tutorial */
     
