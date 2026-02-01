@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="white=device-width, initial-scale=1.0">
+        <title>Test01</title>
+        <style>
+
+            body{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: antiquewhite;
+                line-height: 1.5;
+                margin: 0;
+                padding: 0;
+            }
+
+            header{
+                background-color: aliceblue;
+                display: flex;
+                flex-direction:column ;
+                align-items: center;
+                padding: 20px;
+                box-shadow: 5px 5px 5px  rgba(116, 94, 94, 0.462);
+
+                position: fixed;
+                top: 0;
+                width: 100%;
+            
+            }
+
+            h1{
+                color: rgb(121, 93, 93);
+            }
+
+            .list_menu{
+                display: flex;
+                justify-content: center;
+                list-style: none;
+                
+                gap: 20px;
+                margin: 0;
+                padding: 0;
+            }
+
+            .list_menu a{
+                text-decoration: none;
+                color: aliceblue;
+                background-color: yellowgreen;
+                border-radius: 5px;
+                padding: 5px;
+                margin: 10px;
+            }
+
+             .list_menu a:hover{
+                text-decoration: none;
+                background-color: rgb(96, 13, 186);
+            }
+
+            .container{
+                /* background-color: violet; */
+                max-width: 1200px;
+                margin: auto;
+                
+                 margin-top: 200px;
+        
+            }
+
+            .card1{
+            background-color: rgb(255, 255, 255);
+            padding: 25px 30px;
+            border-radius: 25px;
+            box-shadow: 0 4px 12px rgb(120, 117, 117);
+            margin-bottom: 25px;
+            border: 5px solid rgb(179, 58, 179);
+
+            }
+
+            h2{
+                color: rgb(115, 148, 178);
+            }
+
+            .image_small{
+                width: 100px;
+                height: auto;
+            }
+
+            .sd_data{
+                display: flex;
+                align-items: center;
+                padding-left: 25px;
+
+                gap: 50px;
+
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <H1>รายงานผลการเรียนนักศึกษา</H1>
+            <ul class="list_menu">
+                <li><a href="">ข้อมูลนักศึกษา</a></li>
+                <li><a href="">ผลการเรียน</a></li>
+                <li><a href="">ช่องทางติดต่อ</a></li>
+            </ul>
+        </header>
+<!-- =========================================================================================== -->
+        <div class="container">
+            <div class="card1">
+                <h2>ข้อมูลนักศึกษา</h2>
+                <div class="sd_data">
+                    <div class="img">
+                        <img src="photo/student.jpg" alt="sd.logo" class="image_small">
+                    </div>
+                    
+                    <div class="data">
+                        <p>รหัสนักศึกษา : 674230009</p>
+                        <p>ชื่อ-นามสกุล : นางสาววราภรณ์ สายสล้าง</p>
+                        <p>Miss Warapon Saysalang</p>
+                    </div>
+
+                    <div class="data">
+                        <p>หมู่เรียน : 67/43</p>
+                        <p>สาขาวิชา : เทคโนโลยีสารสนเทศ</p>
+                        <p>คณะ : วิทยาศาสตร์และเทคโนโลยี</p>
+                    </div>
+
+                </div>
+            
+            </div>
+<!-- --------------------------------------------------------------- -->
+            <div class="card1">
+                <h2>ผลการเรียน</h2>
+            </div>
+<!-- --------------------------------------------------------------- -->
+
+            <div class="card1">
+                <h2>ช่องทางติดต่อ</h2>
+            </div>
+
+        </div>
+ <!-- ================================================================================================ -->
+    </body>
+</html>
+
