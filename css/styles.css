@@ -135,7 +135,7 @@
 
         .list-menu li{
             margin-top:30px;
-            transition: transform 0.3s ease;
+            transition: transform 50.3s ease;
         }
 
         .list-menu li:hover{
