@@ -102,7 +102,7 @@
             <div class="wrapper">
                 <div class="content-grid">
                     <!-- Left Side -->
-                     <main class="post-list">                       <!-- ไว้บอกตัวหลัก -->
+                    <main class="post-list">                       <!-- ไว้บอกตัวหลัก -->
                         <!-- card-01 -->
                         <div class="card">
                             <p class="card-headline">
@@ -211,51 +211,170 @@
                          </div>
 
                         <!-- card-03 -->
-                         <div class="card">
-                            📞 ติดต่อเรา
-ชื่อ    นามสกุล อีเมล       เบอร์โทรศัพท์       บริษัท/องค์กร
-หัวข้อที่สนใจ       รายละเอียด      
-ความสนใจเพิ่มเติม
-ต้องการรับข่าวสารทาง email
-สนใจบริการปรึกษา
-สนใจความร่วมมือ
+                        <div class="card">
+                             <h2 class="contact-title">📞 ติดต่อเรา</h2>
+                                <div class="contact-form-main-card">
+                                    <form action="" method="">
+                                    
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label for="fname" class="form-label">ชื่อ</label>
+                                                <input type="text" id="fname" name="fname" placeholder="กรอกชื่อ" class="form-input">
+                                            </div>
 
-📨 ส่งข้อความ
-                         </div>
-                     </main>
+                                            <div class="form-group">
+                                                <label for="lname" class="form-label">นามสกุล*</label>
+                                                <input type="text" id="lname" name="lname" placeholder="กรอกนามสกุล" class="form-input">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label for="email" class="form-label">อีเมล</label>
+                                                <input type="email" id="email" name="email" placeholder="กรอกอีเมล" class="form-input">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="phone" class="form-label">เบอร์โทรศัพท์</label>
+                                                <input type="tel" id="phone" name="phone" placeholder="กรอกเบอร์โทรศัพท์" class="form-input">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label for="company" class="form-label">บริษัท/องค์กร</label>
+                                            <input type="text" id="company" name="company" placeholder="กรอกชื่อบริษัทหรือองค์กร" class="form-input">
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label for="subject" class="form-label">หัวข้อที่สนใจ</label>
+                                            <select name="subject" id="subject" class="form-select">
+                                                <option value="AI">AI</option>
+                                                <option value="IOT">IOT</option>
+                                                <option value="Machine Learning">Machine Learning</option>
+                                                <option value="Blockchain">Blockchain</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="detail" class="form-label">รายละเอียด</label>
+                                            <textarea name="detail" id="detail" placeholder="เขียนข้อความของคุณที่นี่" class="form-textarea"></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="interests" class="form-label">ความสนใจเพิ่มเติม</label>
+
+                                            <div class="form-checkbox-group">
+                                                <div class="checkbox-item"><input type="checkbox" id="interests1" name="interests[]" value="Newsletter">
+                                                <span> ต้องการรับข่าวสารทาง email</span>
+                                                </div>
+
+                                                
+                                                <div class="checkbox-item"><input type="checkbox" id="interests2" name="interests[]" value="consult">
+                                                <span> สนใจบริการปรึกษา</span>
+                                                </div>
+
+
+                                                <div class="checkbox-item"><input type="checkbox" id="interests3" name="interests[]" value="partnership">
+                                                <span> สนใจความร่วมมือ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                        <!-- <input type="submit" value="📨 ส่งข้อความ"> -->
+                                        <div>
+                                            <button type="submit" class="form-button">📨 ส่งข้อความ</button>
+                                            <button type="reset" class="form-button"> ล้างข้อมูล</button>
+                                        </div>
+                                    </form>
+                                </div>
+                        </div>
+                    </main>
                      
                     <!-- right Side -->
-                     <aside>                     <!-- ไว้บอกด้านข้าง -->
+                    <aside>                     <!-- ไว้บอกด้านข้าง -->
                         <!-- widget-01 -->
-                         <div class="widget">
-                            สวัสดีครับ ยินดีต้อนรับ
-ผมชื่อ Suksawat เขียนบล็อกเกี่ยวกับ Startup การตลาด การเขียนโปรแกรม และเทคโนโลยี AI สำหรับ SME และ Startup
-รูปผู้เขียน
-กดติดตามใน Facebook
-                         </div>
+                        <div class="widget">
+                            สวัสดีค่ะ ยินดีต้อนรับ
+                            ดิฉันชื่อ "Warapon" เขียนบล็อกเกี่ยวกับ Startup การตลาด การเขียนโปรแกรม และเทคโนโลยี AI สำหรับ SME และ Startup
+                            รูปผู้เขียน
+                            กดติดตามใน Facebook
+                        </div>
 
                         <!-- widget-02 -->
                         <div class="widget">
-                            📧 รับข่าวสารใหม่
-ชื่อของคุณ  อีเมล       สนใจเนื้อหาด้านไหน      🚀 สมัครเลย!
+                            <div class="contact-form-new-card">
+                                <h2 class="contact-title-new">📧 รับข่าวสารใหม่</h2>
+                                <form action="" method="">
+                                    <div class="form-row-new">
+                                        <div class="form-group-new">
+                                            <label for="fname" class="form-label-new">ชื่อของคุณ</label>
+                                            <input type="text" id="fname" name="fname" placeholder="ใส่ชื่อของคุณ " class="form-input-new">
+                                        </div>
+                                        <div class="form-group">
+                                            <label  for="email" class="form-label-new"> อีเมล</label>
+                                            <input type="email" id="email" name="email" placeholder="example@email.com" class="form-input-new">
+                                        </div>
+                                    
+                                        <div class="form-group">
+                                            <label for="subject" class="form-label-new">สนใจเนื้อหาด้านไหน</label>
+                                            <select name="subject" id="subject" class="form-select-new">
+                                                <option value="ทุกหัวข้อ">ทุกหัวข้อ</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <button type="submit" class="form-button-new">🚀 สมัครเลย!</button>
+                                    </div>
+
+                                </form>
+                            </div>              
                         </div>
 
                         <!-- widget-03 -->
-                        <div class="widget">
-                            💬 ติดต่อด่วน
-ชื่อ        เรื่องที่ต้องการติดต่อ      ข้อความสั้นๆ        📤 ส่งเลย
+                        <div class="widget">                  
+                            <div class="contact-form-new-card modul1">
+                                <h2 class="contact-title-new">💬 ติดต่อด่วน</h2>
+                                    <form action="" method="">
+                                        <div class="form-row-new">
+                                            <div class="form-group-new">
+                                                <label for="fname" class="form-label-new">ชื่อ</label>
+                                                <input type="text" id="fname" name="fname" placeholder="ชื่อของคุณ" class="form-input-new">
+                                            </div>
+                                        
+                                            <div class="form-group">
+                                                <label for="subject" class="form-label-new">เรื่องที่ต้องการติดต่อ</label>
+                                                <select name="subject" id="subject" class="form-select-new">
+                                                    <option value="เลือกเรื่องที่ติดต่อ">เลือกเรื่องที่ติดต่อ</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="detail" class="form-label-new">สนใจเนื้อหาด้านไหน</label>
+                                                <textarea name="detail" id="detail" placeholder="อธิบายสั้นๆ..." class="form-textarea"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <button type="submit" class="form-button-new madulcolor">📤 ส่งเลย</button>
+                                        </div>
+
+                                    </form>
+                            </div>          
                         </div>
 
                         <!-- widget-04 -->
                          <div class="widget">
                             กล่อง Facebook Like (ตัวอย่าง)
-203,779 คนถูกใจ
+                            203,779 คนถูกใจ
                          </div>
 
                         <!-- widget-05 -->
                         <div class="widget">
                             Sponsor
-พื้นที่โฆษณา / วิดีโอ
+                            พื้นที่โฆษณา / วิดีโอ
                         </div>
 
                      </aside>
@@ -267,8 +386,11 @@
      </div>
 
 
+
+
     <!-- footer -->
      <footer>
+
 
      </footer>
     
