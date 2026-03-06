@@ -446,9 +446,41 @@ a:hover{
     transform: translateY(-2px);
     box-shadow: 0 8px 20px #667eea59;
 }
+/* ================================================== */
+/* ผู้เขียนแนะนำตัว*/
+/* ================================================== */
+.widget-title{
+font-size: 1rem;
+font-weight: 700;
+margin-bottom: 8px;
+}
 
+.auther-photo{
+    background-color: #c5c1c7b7;
+    /* padding: 90px 0; */
+    height: 140px;
+    border-radius: 4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 8px 0;
+}
+
+.btn-facebook{
+    background-color: #0e2279;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+
+    display: inline-block;
+    margin-top: 8px;
+}
+
+/* ================================================== */
 /*==== Right Side-Aside ====*/
-
+/* ================================================== */
 .widget{
     background-color: white;
     border-radius: 4px;
@@ -540,7 +572,108 @@ a:hover{
     box-shadow: 0 8px 20px #667eea59;
 }
 
+/* ================================================== */
+/* พื้นที่facebook*/
+/* ================================================== */
+.widget-title{
+font-size: 1rem;
+font-weight: 700;
+margin-bottom: 8px;
+}
 
+.facebook-like{
+    background-color: #c5c1c7b7;
+    padding: 10px;
+    text-align: center;
 
+    padding: 8px 0;
+    border-radius: 4px;
+}
 
+/* ================================================== */
+/* พื้นที่sponser*/
+/* ================================================== */
+.ad-box{
+    background-color: #c5c1c7b7;
+    height: 250px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 8px 0;
+    border-radius: 4px;
+}
+
+/* ================================================== */
+/* พื้นที่gold-table*/
+/* ================================================== */
+
+:root{
+    --line:gold;
+    --bg01:rgb(250, 225, 163);
+    --bg02:rgb(246, 241, 210);
+    --bg03:rgb(169, 246, 133);
+}
+
+.wrap-gold-table{
+    background-color: var(--bg02);
+    border:2px solid var(--line);
+    
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;  /*ซ่อนส่วนที่เกินขอบเขต*/
+}
+
+.gold-table{
+    border:1px solid var(--line);
+    border-collapse:collapse ;
+    width: 100%;
+}
+
+.gold-table thead th{
+    background-color: var(--bg01);
+}
+
+.gold-table tbody th{
+    background-color: var(--bg01);
+}
+
+.gold-table th, .gold-table td{
+    border:1px solid var(--line);
+    padding: 10px 2px;
+}
+
+.gold-table .total th,
+.gold-table .total td{
+    background-color: var(--bg03);
+}
+
+.total{
+    font-weight: 600;
+}
+
+.table-center{
+    text-align: center;
+}
+
+td{
+    text-align: right;
+}
+
+.wrap-gold-table td{
+    padding: 0 10px;
+}
+
+/* ================================================== */
+/* พื้นที่footer*/
+/* ================================================== */
+.footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+
+    padding: 35px 0;
+    margin-top: 30px;
+}
 
