@@ -13,11 +13,7 @@
         line-height: 1.7;
     }
 
-
-        .main-title{
-            color:rgb(240, 6, 170);
-            text-align: center;
-        }
+      
 
         .subtitle{
             text-align: center;
@@ -48,10 +44,40 @@
             margin-top: 15px;
            
         }
+
+        .note::before{
+            content: "🎨";
+
+        }
+
+
        .title {
         border-left: 4px solid #f006aa;         
         padding: 12px 10px;                     
         background-color: #cbc9c5;                                          
+        }
+
+        .back-link{
+            /* display:inline-block; */
+            display:block;
+            margin-top: 15px;
+            text-decoration:none;
+            color: rgb(0, 30, 203);
+            font-weight: bold;
+            background-color: aquamarine;
+            text-align: center;
+            border-radius: 100px;
+            padding: 10px 0 ;
+        }
+        
+        .back-link:hover{
+             /* text-decoration:underline; */
+              color: rgb(230, 217, 157);
+              background-color: rgb(7, 135, 135);
+        }
+
+        footer{
+            margin-bottom :60px; /* เว้นช่องว่างด้านล่างข้างนอกของคลาสfooter */
         }
 
     </style>
@@ -60,7 +86,7 @@
 <body>
     <div class="container"> 
         <!-- ครอบไว้เป็นคลาสใหญ่หรือกรอบใหญ -->
-        <h1 class="main-title">Workshop HTML Heading</h1>
+        <h1 >Workshop HTML Heading</h1>
         <p class="subtitle">ฝึกใช้แท็ก &lt;h1&gt; – &lt;h6&gt;และการปรับขนาดหัวข้อด้วย CSS</p>
         <!-- section 1 -->
         <section class="card">
@@ -94,7 +120,7 @@
         
         <p>เมื่อแสดงผลจะได้ขนาลดหลั่นแบบนี้:</p>
         <div>      
-            <h1>H1: Welcome to My Website</h1>
+            <h1 style="color: black; text-align: left;">H1: Welcome to My Website</h1>   <!-- ถ้าใช้จุดนี้จุดเดียวใช้styleตามนี้ได้เลย แต่ถ้าใช้หลายๆจุดให้ตั้งเป็นคลาส -->
             <h2>H2: HTML Basics</h2>
             <h3>H3: What is HTML?</h3>
             <h4>H4: HTML Syntax</h4>
@@ -129,10 +155,15 @@
         <pre>&lt;h3 style="font-size: 50px; color: blue;"&gt;Big Custom Heading&lt;/h3&gt;</pre>
     </div>
 
-        <p class="note">💡จำไว้ว่าลำดับหัวข้อควรเป็น H1 → H2 → H3 ตามโครงสร้างเนื้อหา ไม่ควรใช ้H5 เพื่อให ้ “ตัวเล็กลง” หรือ ใช ้H1
+        <p class="note">💡จำไว้ว่าลำดับหัวข้อควรเป็น H1 → H2 → H3 ตามโครงสร้างเนื้อหา ไม่ควรใช ้H5 เพื่อให ้ “ตัวเล็กลง” หรือ ใช้ H1
         เพื่อให ้ “ตัวใหญ่ขึ้น” → ต้องแก้ด้วย CSS เท่านั้น</p>
         </section>
-        &larr;Back to HTML Tutorial
+
+        <footer>
+            <a href="index.html" class="back-link">&larr;Back to HTML Tutorial</a>
+        </footer>
+
+        
     </div>
 
 

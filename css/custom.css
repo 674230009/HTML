@@ -614,6 +614,8 @@ margin-bottom: 8px;
     --bg01:rgb(250, 225, 163);
     --bg02:rgb(246, 241, 210);
     --bg03:rgb(169, 246, 133);
+    --green-text:#0d8a02;
+    --red-text:rgb(219, 3, 3);
 }
 
 .wrap-gold-table{
@@ -652,13 +654,37 @@ margin-bottom: 8px;
 .total{
     font-weight: 600;
 }
-
+/* ====================================================== */
 .table-center{
     text-align: center;
 }
 
 td{
     text-align: right;
+}
+
+.text-red{
+    color: var(--red-text);
+}
+.text-green{
+    color: var(--green-text);
+}
+
+.icon{
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+
+
+.up{
+    border-bottom: 10px solid var(--green-text);
+}
+
+.down{
+    border-top: 10px solid var(--red-text);
 }
 
 .wrap-gold-table td{
@@ -677,3 +703,112 @@ td{
     margin-top: 30px;
 }
 
+
+#hamburger-menu{
+    display: none;
+}
+
+
+/* ======================================================================================================= */
+/* REVPONSIVE -------------------------------------------------------------------------------------------- */
+/* ======================================================================================================= */
+
+
+ /* สำหรับหน้าจอ 922px */
+@media(max-width :922px) {
+    .site-header{
+        background-color: yellow;}
+        .content-grid{grid-template-columns:1fr;}
+        
+    }
+/* สำหรับหน้าจอ 768px */
+@media(max-width :768px) {
+     html{font-size: 14px;}
+    .site-header{background-color: rgb(40, 188, 3);}
+    .hero-grid{grid-template-columns:1fr;}
+    .form-row{grid-template-columns:1fr;}
+    .form-checkbox-grop{flex-direction: column;}
+    .nav-menu{
+    flex-direction: column;
+    padding-top: 10px;}
+}        
+
+/* สำหรับหน้าจอ 576px */
+@media(max-width :576px) {
+    .site-header{
+        background-color: rgb(255, 0, 195);}
+        
+        /* hamburger-menu */
+        #hamburger-menu{
+            display: block;
+            height: 30px;
+            width: 30px;
+            position: relative;
+        }
+
+
+        
+
+        /* วาดเส้นhamburger */
+        #hamburger-menu span,
+        #hamburger-menu span:before,
+        #hamburger-menu span:after{
+            background-color: #fff;
+            height: 3px;
+            width: 100%;
+            display: block;
+            position: absolute;
+            content: "";
+            transition: all 0.3s ease;
+        }
+
+        /* วาดเส้นhamburger */
+        #hamburger-menu span{top:13px;}
+       
+        #hamburger-menu span:before{top: -8px;}
+
+        #hamburger-menu span:after{top: 8px;}
+        
+        #menu{
+            display: none;
+        }
+
+
+         /* สร้างเส้น X */
+        #hamburger-menu.close span:before{
+            transform: rotate(45deg);
+            top: 0;
+        }
+        
+        #hamburger-menu.close span{background:transparent;}
+
+        #hamburger-menu.close span:after{
+            transform: rotate(-45deg);
+            top: 0;
+        }
+
+        /* ซ่อนเมนู */
+        #menu{display: none;}
+
+        /* แสดงเมนู */
+        #menu.overlay{display:flex;}
+
+}
+
+
+/* สลับตำหน่องของไอเทม */
+.order-box-imege{order: 3 ;}
+.order-box-imege{order: 2 ;}
+.order-box-imege{order: 1 ;}
+
+
+.sidebar-widget{
+    display: flex;
+    flex-direction: column;
+}
+
+.widget .order-w-intro{order: 1;}
+.widget .order-w-f-green{order:4 ;}
+.widget .order-w-f-preple{order:5 ;}
+.widget .order-w-fb{order:2 ;}
+.widget .order-w-intro{order:3 ;}
