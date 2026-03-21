@@ -109,6 +109,10 @@
     <div class="container">
         <section class="customize">
             <div class="left-side">
+                <div class="right-side">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400"
+                        alt="Server technology">
+                </div>
                 <h2>Customizable Technology Stack</h2>
                 <p>
                     Our IT solutions are flexible and tailored to your enterprise needs.
@@ -121,11 +125,7 @@
                 <button class="btn-primary">
                     Learn more <i class="fa-solid fa-angles-right"></i>
                 </button>
-            </div>
 
-            <div class="right-side">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400"
-                    alt="Server technology">
             </div>
         </section>
     </div>
@@ -135,6 +135,10 @@
         <div class="container">
             <section class="support">
                 <div class="left-side">
+                    <div class="right-side">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400"
+                            alt="IT support team">
+                    </div>
                     <h2>24/7 Technical Support</h2>
                     <p>
                         TechVault provides round-the-clock support and professional services
@@ -145,9 +149,6 @@
                     <button class="btn-primary">
                         Learn more <i class="fa-solid fa-angles-right"></i>
                     </button>
-                </div>
-                <div class="right-side">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400" alt="IT support team">
                 </div>
             </section>
         </div>
@@ -235,39 +236,40 @@
                 <h2 class="section-title">🔍 Find Your Ideal IT Solution</h2>
 
                 <form class="recommendation-form" id="recommendationForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="name" required class="form-input">
+                    <div class="form-row-grid">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required class="form-input">
+                            </div>
                         </div>
-
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required class="form-input">
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="lifestyle">Business Type:</label>
-                            <select id="lifestyle" name="lifestyle" required class="form-select">
-                                <option value="">Select your business type</option>
-                                <option value="active">Startup - Rapidly Growing</option>
-                                <option value="moderate">Mid-Size Enterprise</option>
-                                <option value="quiet">Large Enterprise</option>
-                                <option value="busy">Government/Regulated Industry</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="budget">Annual IT Budget:</label>
-                            <select id="budget" name="budget" required class="form-select">
-                                <option value="">Select budget range</option>
-                                <option value="low">Under $50,000</option>
-                                <option value="medium">$50,000 - $250,000</option>
-                                <option value="high">$250,000 - $1,000,000</option>
-                                <option value="premium">Over $1,000,000</option>
-                            </select>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="lifestyle">Business Type:</label>
+                                <select id="lifestyle" name="lifestyle" required class="form-select">
+                                    <option value="">Select your business type</option>
+                                    <option value="active">Startup - Rapidly Growing</option>
+                                    <option value="moderate">Mid-Size Enterprise</option>
+                                    <option value="quiet">Large Enterprise</option>
+                                    <option value="busy">Government/Regulated Industry</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="budget">Annual IT Budget:</label>
+                                <select id="budget" name="budget" required class="form-select">
+                                    <option value="">Select budget range</option>
+                                    <option value="low">Under $50,000</option>
+                                    <option value="medium">$50,000 - $250,000</option>
+                                    <option value="high">$250,000 - $1,000,000</option>
+                                    <option value="premium">Over $1,000,000</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
 
@@ -279,17 +281,14 @@
                                     <input type="radio" name="timeAvailable" value="less1" required>
                                     <span>Minimal Support</span>
                                 </label>
-
                                 <label class="radio-item">
                                     <input type="radio" name="timeAvailable" value="1to3" required>
                                     <span>Business Hours Support</span>
                                 </label>
-
                                 <label class="radio-item">
                                     <input type="radio" name="timeAvailable" value="3to6" required>
                                     <span>24/5 Support</span>
                                 </label>
-
                                 <label class="radio-item">
                                     <input type="radio" name="timeAvailable" value="more6" required>
                                     <span>24/7 Premium Support</span>

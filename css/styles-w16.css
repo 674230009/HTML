@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
 }
 
 :root {
@@ -207,11 +208,13 @@ section {
     display: flex;
     align-items: center;
     gap: 40px;
+
 }
 
 .left-side,
 .right-side {
-    flex: 1
+    flex: 1;
+    margin-bottom: 24px;
 }
 
 
@@ -251,7 +254,6 @@ section {
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
-
 
 .discover-content {
     grid-template-columns: repeat(4, 1fr);
@@ -297,9 +299,18 @@ section {
 .form-group label {
     display: block;
     margin-bottom: 8px;
+    margin-top: 15px;
     font-weight: 600;
     color: #0f172a;
 }
+
+.form-row-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* ตั้วนี้ทำให้ฟอร์มเป็นแบบแถวละ2คอลลัม */
+    gap: 15px;
+}
+
 
 .form-input,
 .form-select,
@@ -311,11 +322,11 @@ section {
     font-size: 1rem;
 }
 
-
-
 .radio-group,
 .checkbox-group {
     display: flex;
+    flex-wrap: wrap;
+    /* ให้ขึ้นบรรทัดใหม่ได้ */
     gap: 14px;
 }
 
@@ -368,6 +379,7 @@ footer {
 
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .footer-left {
@@ -417,52 +429,101 @@ footer {
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 992px) {
+
     .hero,
     .solution-content,
-    .support{
+    .support,
+    .customize {
         flex-direction: column;
     }
 
     .solution-content,
-    .discover-content{
+    .discover-content {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-    @media (max-width: 768px) {
-        .header-button{
-            display: none;
-        }
-        #burger-menu{
-            display: block;
-            margin-right: 20px;
-        }
-        #menu{
-            width: 100%;
-            padding: 0 20px;
-            border-top: 1px solid gray;
 
-            max-height: 0;
-            overflow: hidden;
-        }
 
-         #menu.show-menu{
-            max-height: 300px;
-        }
-
-        .nav-menu{
-            flex-direction: column;
-            gap: 12px;
-            padding: 10px 0 ;
-        }
-
-        .nav-menu li a{
-            border-bottom: 1px solid gray;
-            padding: 8px 0;
-            display: block;
-        }
+@media (max-width: 768px) {
+    .header-button {
+        display: none;
     }
 
-    @media (max-width: 480px) {
-
+    #burger-menu {
+        display: block;
+        margin-right: 20px;
     }
+
+    #menu {
+        width: 100%;
+        padding: 0 20px;
+        border-top: 1px solid gray;
+
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    #menu.show-menu {
+        max-height: 300px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 12px;
+        padding: 10px 0;
+    }
+
+    .nav-menu li a {
+        border-bottom: 1px solid gray;
+        padding: 8px 0;
+        display: block;
+    }
+
+    .footer-right {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .solution-content,
+    .discover-content {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .radio-group {
+        flex-direction: column;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-right {
+        margin-top: 24px;
+    }
+
+    .btn-signup,
+    .btn-login,
+    .btn-primary,
+    .btn-submit,
+    .btn-reset {
+        display: block;
+        width: 100%;
+    }
+
+    .btn-submit{
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+    
+
+}
